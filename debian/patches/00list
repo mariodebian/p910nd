@@ -1,0 +1,3 @@
+10-replace-sysconfig-etc_default.dpatch
+20-use-debian.init-script.dpatch
+30-disable-start-by-default.dpatch
