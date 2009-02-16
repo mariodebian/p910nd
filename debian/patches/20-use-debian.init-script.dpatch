@@ -2,7 +2,7 @@
 ## 20-use-debian.init-script.dpatch by Mario Izquierdo (mariodebian) <mariodebian@gmail.com>
 ##
 ## All lines beginning with `## DP:' are a description of the patch.
-## DP: No description.
+## DP: Use Debian init.d script
 
 @DPATCH@
 diff -urNad p910nd-0.92~/Makefile p910nd-0.92/Makefile

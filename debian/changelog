@@ -1,12 +1,6 @@
 p910nd (0.93-1) unstable; urgency=low
 
-  * New upstream release:
-    - Fix open call to include mode, required for O_CREAT
+  * Initial version (Closes: #514615)
 
- -- Mario Izquierdo (mariodebian) <mariodebian@gmail.com>  Mon, 09 Feb 2009 13:23:41 +0100
+ -- Mario Izquierdo (mariodebian) <mariodebian@gmail.com>  Mon, 16 Feb 2009 11:03:54 +0100
 
-p910nd (0.92-1) unstable; urgency=low
-
-  * Initial release
-
- -- Mario Izquierdo (mariodebian) <mariodebian@gmail.com>  Sun, 08 Feb 2009 18:00:41 +0100
