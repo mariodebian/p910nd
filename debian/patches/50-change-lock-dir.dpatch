@@ -1,0 +1,31 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 50-change-lock-dir.dpatch by Mario Izquierdo (mariodebian) <mariodebian@gmail.com>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: Move lock files to /var/lock/p910nd (subsys seems to be Red Hat specific)
+
+@DPATCH@
+diff -urNad p910nd~/p910nd.8 p910nd/p910nd.8
+--- p910nd~/p910nd.8	2009-02-09 13:23:25.000000000 +0100
++++ p910nd/p910nd.8	2009-02-22 16:24:24.000000000 +0100
+@@ -83,7 +83,7 @@
+ .SH "SEE ALSO"
+ printcap(5), hosts_access(5)
+ .SH FILES
+-/var/run/p9100d.pid, /var/lock/subsys/p9100d, /etc/hosts.allow, /etc/hosts.deny
++/var/run/p9100d.pid, /var/lock/p910nd/p9100d, /etc/hosts.allow, /etc/hosts.deny
+ .SH COPYRIGHT
+ .I p910nd
+ is under the GNU Public License Version 2
+diff -urNad p910nd~/p910nd.c p910nd/p910nd.c
+--- p910nd~/p910nd.c	2009-02-16 11:29:29.000000000 +0100
++++ p910nd/p910nd.c	2009-02-22 16:24:02.000000000 +0100
+@@ -109,7 +109,7 @@
+ #ifdef		LOCKFILE_DIR
+ #define		LOCKFILE	LOCKFILE_DIR "/p910%cd"
+ #else
+-#define		LOCKFILE	"/var/lock/subsys/p910%cd"
++#define		LOCKFILE	"/var/lock/p910nd/p910%cd"
+ #endif
+ #ifndef		PRINTERFILE
+ #define         PRINTERFILE     "/dev/lp%c"
