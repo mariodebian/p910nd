@@ -1,3 +1,11 @@
+p910nd (0.93-2) UNRELEASED; urgency=low
+
+  * Fix debian/p910nd.init:
+    - Rename PIDFILE p910nd => p9100d
+    -  Set verbose by default 
+
+ -- Mario Izquierdo (mariodebian) <mariodebian@gmail.com>  Sun, 22 Feb 2009 19:10:04 +0100
+
 p910nd (0.93-1) unstable; urgency=low
 
   * Initial version (Closes: #514615)
