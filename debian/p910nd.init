@@ -27,6 +27,10 @@ SCRIPTNAME=/etc/init.d/$NAME
 # Exit if the package is not installed
 [ -x "$DAEMON" ] || exit 0
 
+# create /var/run and /var/lock/p910nd (Debian policy 3.8.1)
+[ ! -d /var/run ] && mkdir -p /var/run
+[ ! -d /var/lock/p910nd ] && mkdir -p /var/lock/p910nd
+
 P910ND_OPTS=""
 P910ND_NUM=""
 
@@ -88,7 +92,10 @@ do_stop()
 case "$1" in
   start)
 	# disable start
-	[ "$P910ND_START" != "1" ] && exit 0
+	if [ "$P910ND_START" != "1" ]; then
+            log_warning_msg "Not starting p910nd daemon. Please edit /etc/default/p910nd first."
+            exit 0
+        fi
 
 	log_daemon_msg "Starting $DESC" "$NAME"
 	do_start

@@ -3,8 +3,11 @@ p910nd (0.93-2) UNRELEASED; urgency=low
   * Fix debian/p910nd.init:
     - Rename PIDFILE p910nd => p9100d
     - Set verbose by default 
+  * Standards-Version bumped to 3.8.1:
+    debian/p910nd.init fixed, /var/run and /var/lock/p190nd created on init.d
+    script, since these 2 dirs could be mounted as a temporary filesystem.
 
- -- Mario Izquierdo (mariodebian) <mariodebian@gmail.com>  Sun, 22 Feb 2009 19:10:04 +0100
+ -- Mario Izquierdo (mariodebian) <mariodebian@gmail.com>  Sun, 29 Mar 2009 13:56:41 +0200
 
 p910nd (0.93-1) unstable; urgency=low
 
