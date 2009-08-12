@@ -3,7 +3,7 @@ Section: net
 Priority: extra
 Maintainer: Mario Izquierdo (mariodebian) <mariodebian@gmail.com>
 Build-Depends: cdbs, debhelper (>= 7), dpatch, libwrap0-dev
-Standards-Version: 3.8.1
+Standards-Version: 3.8.2
 Homepage: http://p910nd.sourceforge.net/
 
 Package: p910nd

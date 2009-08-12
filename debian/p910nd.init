@@ -1,12 +1,12 @@
 #! /bin/sh
 ### BEGIN INIT INFO
 # Provides:          p910nd
-# Required-Start:    $syslog
+# Required-Start:    $remote_fs $syslog $network
 # Should-Start:
-# Required-Stop:     $syslog
+# Required-Stop:     $remote_fs $syslog
 # Should-Stop:
-# Default-Start:     3 5
-# Default-Stop:      0 1 2 6
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
 # Short-Description: p910nd daemon providing network printer access
 # Description:       Start p910nd to provide port 9100+n printer service
 ### END INIT INFO
