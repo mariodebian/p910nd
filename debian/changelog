@@ -1,3 +1,10 @@
+p910nd (0.93-3) unstable; urgency=low
+
+  * Add debian/README.source (Debian Policy manual, section 4.14)
+  * Standards-Version bumped to 3.9.1 (no changes needed)
+
+ -- Mario Izquierdo (mariodebian) <mariodebian@gmail.com>  Tue, 28 Sep 2010 15:34:43 +0200
+
 p910nd (0.93-2) unstable; urgency=low
 
   * Fix debian/p910nd.init:
