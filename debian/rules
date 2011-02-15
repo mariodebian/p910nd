@@ -1,11 +1,20 @@
 #!/usr/bin/make -f
+# -*- makefile -*-
+#export DH_VERBOSE=1
 
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/makefile.mk
 
-include /usr/share/cdbs/1/rules/dpatch.mk
-include /usr/share/dpatch/dpatch.make
+override_dh_auto_clean:
+	rm -f changelog
+	dh_auto_clean
 
-DEB_MAKE_INSTALL_TARGET := install DESTDIR="$(DEB_DESTDIR)"
-DEB_DH_INSTALLINIT_ARGS := -r --update-rcd-params='start 20 2 3 4 5 . stop 20 0 1 6 .'
+override_dh_auto_build:
+	$(MAKE) USE_WRAP=1 LOCKFILE_DIR=\"/var/log\"
+	# upstream don't provive changelog file, generate from p910nd.c header
+	head -88 p910nd.c | tail -71 | sed -e 's/ \*//g' > changelog
+
+override_dh_installinit:
+	dh_installinit --update-rcd-params='start 20 2 3 4 5 . stop 20 0 1 6 .'
+
+%:
+	dh $@
 

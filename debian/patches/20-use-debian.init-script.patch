@@ -1,0 +1,14 @@
+Description: Use debian/p910nd.init script instead of upstream one
+Index: p910nd/Makefile
+===================================================================
+--- p910nd.orig/Makefile	2011-02-15 13:10:57.615777564 +0100
++++ p910nd/Makefile	2011-02-15 13:12:27.415759053 +0100
+@@ -18,7 +18,7 @@
+ 
+ PROG = p910nd
+ CONFIG = p910nd.conf
+-INITSCRIPT = p910nd.init
++INITSCRIPT = debian/p910nd.init
+ MANPAGE = p910nd.8
+ INSTALL = install
+ BINDIR = /usr/sbin

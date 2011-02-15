@@ -1,3 +1,17 @@
+p910nd (0.94-1) unstable; urgency=low
+
+  * New upstream version
+  * Switch from cdbs + dpatch to dh7 + quilt
+  * New patch 60-fix-sin-addr-sockaddr.patch:
+    - Use get_ip_str instead of inet_ntoa 
+      (struct sockaddr_storage don't have sin_addr or sin_port)
+  * Generate upstream changelog from p910nd.c headers
+  * Remove 50-change-lock-dir:
+    - Use Makefile LOCKFILE_DIR instead
+  * Add README.Debian (Closes: #607852)
+
+ -- Mario Izquierdo (mariodebian) <mariodebian@gmail.com>  Tue, 15 Feb 2011 14:37:28 +0100
+
 p910nd (0.93-3) unstable; urgency=low
 
   * Add debian/README.source (Debian Policy manual, section 4.14)

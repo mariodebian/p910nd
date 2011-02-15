@@ -1,0 +1,13 @@
+Description: Don't start daemon by default
+Index: p910nd/p910nd.conf
+===================================================================
+--- p910nd.orig/p910nd.conf	2011-02-15 13:09:31.050744374 +0100
++++ p910nd/p910nd.conf	2011-02-15 13:13:25.179740514 +0100
+@@ -2,3 +2,7 @@
+ P910ND_NUM=""
+ # Additional daemon arguments, see man 8 p910nd
+ P910ND_OPTS=""
++
++
++# Debian specific (set to 1 to enable start by default)
++P910ND_START=0

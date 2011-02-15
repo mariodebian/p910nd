@@ -1,0 +1,18 @@
+Description: Exit daemon if port number is bigger than 9, two digits breaks LOCKFILE
+Index: p910nd/p910nd.c
+===================================================================
+--- p910nd.orig/p910nd.c	2011-02-15 13:09:31.002744695 +0100
++++ p910nd/p910nd.c	2011-02-15 13:14:31.474773119 +0100
+@@ -652,6 +652,12 @@
+ 	argc -= optind;
+ 	argv += optind;
+ 	if (argc > 0) {
++		/* exit if port number is bigger than 9 */
++		/*(2 digits breaks some things, ex LOCKFILE) */
++		if ( strlen(argv[0]) > 1) {
++			fprintf(stderr, "Error, port number > 9\n");
++			return(-1);
++		}
+ 		if (isdigit(argv[0][0]))
+ 			lpnumber = argv[0][0];
+ 	}

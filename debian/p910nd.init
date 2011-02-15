@@ -2,9 +2,7 @@
 ### BEGIN INIT INFO
 # Provides:          p910nd
 # Required-Start:    $remote_fs $syslog $network
-# Should-Start:
 # Required-Stop:     $remote_fs $syslog
-# Should-Stop:
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
 # Short-Description: p910nd daemon providing network printer access

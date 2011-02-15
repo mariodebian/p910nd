@@ -1,0 +1,37 @@
+p910nd for Debian
+-----------------
+
+p910nd is not started by default.
+You need to edit /etc/default/p910nd and change some options:
+
+ * P910ND_OPTS: Use this variable to set p910nd options.
+                See man p910nd(8) for all options
+
+ * P910ND_NUM: Printer number ( use port: 9100 + P910ND_NUM )
+
+ * P910ND_START: In Debian this variable enable or disable p910nd start.
+                 p910nd exposes TCP ports and admin is responsible 
+                 for securing it.
+                 Set to "1" to enable p910nd.
+
+Example:
+  Start p910nd in 9100 port with /dev/usb/lp1 USB printer.
+
+    P910ND_OPTS=" -f /dev/usb/lp1"
+    P910ND_NUM="0"
+    P910ND_START="1"
+
+In Debian p910nd is compiled with USE_LIBWRAP.
+Access control can be done with /etc/hosts.allow and /etc/hosts.deny.
+The service name is p910nd.
+
+Example (only allow local network):
+
+  /etc/hosts.allow
+    p910nd: 192.168.0.
+
+  /etc/hosts.deny
+    p910nd: ALL
+
+
+ -- Mario Izquierdo (mariodebian) <mariodebian@gmail.com>  Tue, 15 Feb 2011 14:22:38 +0100
