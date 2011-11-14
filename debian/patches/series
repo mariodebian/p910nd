@@ -2,4 +2,4 @@
 20-use-debian.init-script.patch
 30-disable-start-by-default.patch
 40-fix-port-number-bigger-than-9.patch
-60-fix-sin-addr-sockaddr.patch
+50-use-var-lock-p910nd-instead-off-var-lock-subsys.patch

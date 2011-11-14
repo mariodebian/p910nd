@@ -1,3 +1,14 @@
+p910nd (0.95-1) unstable; urgency=low
+
+  * New upstream version
+  * Standards-Version bumped to 3.9.2 (no changes needed)
+  * Remove patch 60-fix-sin-addr-sockaddr.patch (upstream applied)
+  * Add 50-use-var-lock-p910nd-instead-off-var-lock-subsys.patch:
+    - Use /var/lock/p910nd instead of /var/lock/subsys
+      (Closes: #634225) (LP: #884658) (LP: #548739)
+
+ -- Mario Izquierdo (mariodebian) <mariodebian@gmail.com>  Mon, 14 Nov 2011 23:04:00 +0100
+
 p910nd (0.94-1) unstable; urgency=low
 
   * New upstream version

@@ -8,9 +8,9 @@ override_dh_auto_clean:
 	dh_auto_clean
 
 override_dh_auto_build:
-	$(MAKE) USE_WRAP=1 LOCKFILE_DIR=\"/var/lock/p910nd\"
-	# upstream don't provive changelog file, generate from p910nd.c header
-	head -88 p910nd.c | tail -71 | sed -e 's/ \*//g' > changelog
+	$(MAKE) USE_WRAP=1
+	# upstream don't provide changelog file, generate from p910nd.c header
+	head -93 p910nd.c | tail -75 | sed -e 's/ \*//g' > changelog
 
 override_dh_installinit:
 	dh_installinit --update-rcd-params='start 20 2 3 4 5 . stop 20 0 1 6 .'
