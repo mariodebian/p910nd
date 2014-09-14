@@ -1,3 +1,10 @@
+p910nd (0.97-1) unstable; urgency=low
+
+  * New upstream version
+  * Bump standards version to 3.9.5, no changes needed
+
+ -- Mario Izquierdo (mariodebian) <mariodebian@gmail.com>  Sun, 14 Sep 2014 16:30:00 +0200
+
 p910nd (0.95-1) unstable; urgency=low
 
   * New upstream version
