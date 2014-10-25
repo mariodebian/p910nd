@@ -5,8 +5,8 @@ Maintainer: Mario Izquierdo (mariodebian) <mariodebian@gmail.com>
 Build-Depends: debhelper (>= 7.0.50~), libwrap0-dev
 Standards-Version: 3.9.5
 Homepage: http://p910nd.sourceforge.net/
-Vcs-Git: http://tcosproject.org/git/p910nd.git
-Vcs-Browser: http://tcosproject.org/cgit/p910nd.git
+Vcs-Git: git://github.com/mariodebian/p910nd.git
+Vcs-Browser: https://github.com/mariodebian/p910nd
 
 Package: p910nd
 Architecture: any

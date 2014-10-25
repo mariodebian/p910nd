@@ -1,3 +1,9 @@
+p910nd (0.97-2) unstable; urgency=medium
+
+  * Move to Github
+
+ -- Mario Izquierdo (mariodebian) <mariodebian@gmail.com>  Sat, 25 Oct 2014 10:53:43 +0200
+
 p910nd (0.97-1) unstable; urgency=low
 
   * New upstream version
